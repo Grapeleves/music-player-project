@@ -1,0 +1,29 @@
+/* components/area-header/index.wxss */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88rpx;
+}
+
+.header .title{
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+/* 因为微信小程序，不支持插槽默认值显示，所以使用css来进行控制，当slot为空时，将default设置为flex布局。 */
+.header .right .slot:empty + .default{
+    display: flex;
+}
+
+.header .right .default{
+    display: none;
+    align-items: center;
+    font-size: 28rpx;
+    color: #777;
+}
+
+.header .right .default .icon{
+    width: 50rpx;
+    height: 50rpx;
+}

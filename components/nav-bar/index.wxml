@@ -1,0 +1,28 @@
+<!--components/nav-bar/index.wxml-->
+<view class="nav">
+    <!-- 状态栏 -->
+    <view class="status"
+          style="height: {{statusHeight}}px;"></view>
+    <!-- 导航栏 -->
+    <view class="nav-bar">
+        <view class="left"
+              bindtap="handleLeftClick">
+            <!-- 设置默认插槽时需要将默认的写在插槽的后面 -->
+            <!-- 插槽 -->
+            <view class="left-slot">
+                <slot name="left"></slot>
+            </view>
+            <!-- 默认显示 -->
+            <view class="left-arrow">
+                <image class="icon" mode="widthFix" src="/assets/images/icons/arrow-left.png"></image>
+            </view>
+        </view>
+        <view class="center">
+            <view class="center-slot">
+                <slot name="center"></slot>
+            </view>
+            <view class="center-title">{{title}}</view>
+        </view>
+        <view class="right"></view>
+    </view>
+</view>

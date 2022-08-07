@@ -1,0 +1,2 @@
+<!--pages/home-profile/index.wxml-->
+<button open-type="getUserInfo" bindtap="handleGetUserInfo">登录/注册</button>

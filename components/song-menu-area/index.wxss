@@ -1,0 +1,38 @@
+/* components/song-menu-area/index.wxss */
+/* 方案一： */
+/* .menu-list{
+    不进行换行操作即可水平滚动
+    white-space: nowrap;
+    position: relative;
+    left: -20rpx;
+}
+.menu-item{
+    display: inline-block;
+    顶部对齐-真机测试时可能会出现无法对齐
+    vertical-align: top;
+    width: 200rpx;
+    height: 200rpx;
+    background-color: red;
+    margin-left: 20rpx;
+}
+.menu-item:last-of-type{
+    margin-right:20rpx ;
+} */
+/* 方案二： */
+.menu-list{
+    width: 100vw;
+    /* 不进行换行操作即可水平滚动 */
+    white-space: nowrap;
+    position: relative;
+    left: -20rpx;
+}
+.menu-item{
+    display: inline-block;
+    /* 顶部对齐-真机测试时可能会出现无法对齐 */
+    vertical-align: top;
+    width: 220rpx;
+    margin-left: 20rpx;
+}
+.menu-item:last-of-type{
+    margin-right:20rpx ;
+}

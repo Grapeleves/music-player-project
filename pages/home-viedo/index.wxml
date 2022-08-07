@@ -1,0 +1,10 @@
+<!--pages/home-music/index.wxml-->
+
+<view class="video">
+    <view class="item" wx:for="{{topMVs}}" wx:key="id">
+        <video-item-v1 item="{{item}}" 
+                       bindtap="handleVideoItemClick"
+                       data-item="{{item}}"></video-item-v1>
+    </view>
+    <!-- data-item="{{item}}"将item数据绑定到组件，这样可以在点击时通过event获取到-->
+</view>

@@ -1,0 +1,35 @@
+/* components/nav-bar/index.wxss */
+.status{
+    background-color: sandybrown;
+}
+.nav-bar{
+    display: flex;
+    height: 44px;
+    text-align: center;
+}
+.left,.right,.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 120rpx;
+}
+.left .left-slot:empty + .left-arrow{
+    display: block;
+}
+.left .left-arrow{
+    display: none;
+}
+.left .left-arrow .icon{
+    width: 44rpx;
+    /* 图片自身的3像素，使用 display: block; 可以解决 */
+    display: block; 
+}
+.center{
+    flex: 1;
+}
+.center .center-slot:empty + .center-title{
+    display: block;
+}
+.center .center-title{
+    display: none;
+}

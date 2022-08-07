@@ -1,0 +1,32 @@
+<!--components/song-menu-area/index.wxml-->
+<view class="area">
+    <area-header title="{{title}}"></area-header>
+    
+    <!-- 实现在水平滚动时左侧没有留白，因为默认设置了全局的padding-left为20rpx，所以默认在滑动是左侧会有20rp的留白 -->
+    <!-- 
+        方案一：给scroll-view设置宽度为屏幕宽度screenWidth
+        可以将screenWidth放在全局app.js中，然后通过getApp()获取
+     -->
+    <!-- <scroll-view scroll-x 
+                 class="menu-list"
+                 style="width:{{screenWidth}}px;">
+        <block wx:for="{{6}}" wx:key="*this">
+            <view class="menu-item"></view>
+        </block>
+    </scroll-view> -->
+    <!-- 
+        方案二：设置宽度为100vw。
+        vw获取的视口的宽度
+     -->
+    <scroll-view scroll-x 
+                 class="menu-list">
+        <block wx:for="{{songMenu}}" wx:key="id">
+            <view class="menu-item">
+                <song-menu-item item="{{item}}"
+                                bindtap="handlerMenuItemClick"
+                                data-item="{{item}}">
+                </song-menu-item>
+            </view>
+        </block>
+    </scroll-view>
+</view>

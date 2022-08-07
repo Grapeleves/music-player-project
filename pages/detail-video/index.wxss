@@ -1,0 +1,14 @@
+/* pages/detail-video/index.wxss */
+/* 
+* 微信默认的全局属性，可直接使用
+* video视频播放器有一个默认的高度225px，文档中可查
+ */
+page{
+    padding-top: 225px; 
+}
+
+.viedo{
+    width: 100%;
+    position: fixed;
+    top: 0;
+}

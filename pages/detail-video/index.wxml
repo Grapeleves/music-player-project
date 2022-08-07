@@ -1,0 +1,11 @@
+<!--pages/detail-video/index.wxml-->
+<video class="viedo"
+       src="{{mvURLInfo.url}}" 
+       loop
+       referrer-policy="origin"
+       autoplay>
+</video>
+
+<block wx:for="{{100}}" wx:key="*this">
+    <view>列表数据{{item}}</view>
+</block>
